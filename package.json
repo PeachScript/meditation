@@ -1,0 +1,24 @@
+{
+  "name": "meditation",
+  "version": "0.0.0",
+  "description": "A deep and refined theme for the Ghost blog engine.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeachScript/meditation.git"
+  },
+  "keywords": [
+    "blog theme",
+    "theme",
+    "Ghost",
+    "Ghost blog engine"
+  ],
+  "author": "Peach <scdzwyxst@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeachScript/meditation/issues"
+  },
+  "homepage": "https://github.com/PeachScript/meditation"
+}
