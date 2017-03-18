@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "description": "A deep and refined theme for the Ghost blog engine.",
   "scripts": {
+    "dev": "webpack -w --progress --hide-modules --devtool inline-source-map",
+    "build": "webpack -p --progress --hide-modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +22,21 @@
   "bugs": {
     "url": "https://github.com/PeachScript/meditation/issues"
   },
-  "homepage": "https://github.com/PeachScript/meditation"
+  "homepage": "https://github.com/PeachScript/meditation",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^7.0.0-beta.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-runtime": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.14.1",
+    "webpack": "^2.2.1"
+  }
 }
