@@ -44,6 +44,7 @@ header {
         text-indent: -2px;
         text-transform: uppercase;
         a {
+          display: inline-block;
           color: $c-white;
           text-decoration: none;
           &:hover {
@@ -62,14 +63,17 @@ header {
   .post-item {
     position: relative;
     margin-bottom: 30px;
-    transition: background-color .3s;
     &:hover {
-      background-color: $c-basic;
-      transition: background-color .7s;
       .post-item-cover {
-        opacity: .26;
+        opacity: 1;
         transform: scale(1);
         transition: visibility .7s, opacity .7s, transform .7s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: .3s;
+        &::after {
+          opacity: .76;
+          visibility: visible;
+          transition: visibility .7s, opacity .7s;
+        }
       }
     }
     .post-item-content {
@@ -86,8 +90,8 @@ header {
       time {
         position: absolute;
         z-index: 1;
-        right: 20px;
-        bottom: 10px;
+        right: 30px;
+        bottom: 15px;
         font-family: 'DJB Get Digital';
         font-size: 24px;
         color: $c-white;
@@ -96,8 +100,8 @@ header {
     .post-item-tags {
       position: absolute;
       z-index: 1;
-      left: 20px;
-      bottom: 15px;
+      left: 30px;
+      bottom: 20px;
       color: $c-gray;
       a {
         color: $c-white;
@@ -112,16 +116,29 @@ header {
     }
     .post-item-cover {
       position: absolute;
-      z-index: 0;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
+      z-index: -1;
+      top: 1px;
+      right: 1px;
+      left: 1px;
+      bottom: 1px;
       background-size: cover;
       opacity: 0;
-      transform: scale(1.1);
+      transform: scale(1.1) translateZ(1px);
       transition: visibility .5s, opacity .5s, transform .5s cubic-bezier(0.55, 0.055, 0.675, 1);
       pointer-events: none;
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $c-basic;
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility .5s, opacity .5s;
+      }
     }
   }
 }
