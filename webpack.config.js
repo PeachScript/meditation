@@ -3,7 +3,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: './assets/js/main.js',
+    path: './assets/',
+    filename: 'js/main.js',
   },
   module: {
     rules: [
@@ -18,13 +19,25 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader'],
         }),
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'img/[name].[ext]',
+        },
+      },
     ],
   },
-  plugins: [new ExtractTextPlugin('./assets/css/main.css')],
+  plugins: [new ExtractTextPlugin('css/main.css')],
 };
