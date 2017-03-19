@@ -1,0 +1,14 @@
+<div class="post-list">
+  {{#foreach posts}}
+  <article class="post-item">
+    <a href="{{url}}" class="post-item-content">
+      <h3>{{title}}</h3>
+      <time>{{date format="YYYY-MM-DD HH:mm:ss"}}</time>
+    </a>
+    <div class="post-item-tags">
+      {{tags separator=" & "}}
+    </div>
+    <div class="post-item-cover"{{#if image}} style="background-image: url('{{image}}');"{{/if}}></div>
+  </article>
+  {{/foreach}}
+</div>

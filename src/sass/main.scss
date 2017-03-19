@@ -1,15 +1,17 @@
 @import '../../node_modules/normalize.css/normalize.css';
 @import 'variables';
+@import 'fonts';
 
 body {
   margin: 0;
+  background-color: $c-basic;
   background-image: url('../assets/img/deep_space_bg.svg');
   background-attachment: fixed;
 }
 
 header {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $s-max-width;
   padding-top: 30px;
   text-align: center;
   a {
@@ -49,6 +51,77 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+.post-list {
+  margin: 20px auto;
+  padding: 0 60px 50px;
+  max-width: $s-max-width;
+  .post-item {
+    position: relative;
+    margin-bottom: 30px;
+    transition: background-color .3s;
+    &:hover {
+      background-color: $c-basic;
+      transition: background-color .7s;
+      .post-item-cover {
+        opacity: .26;
+        transform: scale(1);
+        transition: visibility .7s, opacity .7s, transform .7s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+    }
+    .post-item-content {
+      display: block;
+      padding: 10% 0 10%;
+      text-decoration: none;
+      border: 1px solid $c-white;
+      h3 {
+        font-size: 60px;
+        text-align: center;
+        color: $c-white;
+        font-weight: normal;
+      }
+      time {
+        position: absolute;
+        z-index: 1;
+        right: 20px;
+        bottom: 10px;
+        font-family: 'DJB Get Digital';
+        font-size: 24px;
+        color: $c-white;
+      }
+    }
+    .post-item-tags {
+      position: absolute;
+      z-index: 1;
+      left: 20px;
+      bottom: 15px;
+      color: $c-gray;
+      a {
+        color: $c-white;
+        text-decoration: none;
+        &::before {
+          content: '[';
+        }
+        &::after {
+          content: ']';
+        }
+      }
+    }
+    .post-item-cover {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-size: cover;
+      opacity: 0;
+      transform: scale(1.1);
+      transition: visibility .5s, opacity .5s, transform .5s cubic-bezier(0.55, 0.055, 0.675, 1);
+      pointer-events: none;
     }
   }
 }
