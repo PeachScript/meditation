@@ -1,0 +1,15 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/typo.css/typo.css';
+
+// override styles for typo.css
+blockquote {
+  border-left: 2px solid $c-basic;
+}
+
+a {
+  color: $c-basic;
+}
+
+.typo a {
+  border-bottom: 1px solid $c-basic;
+}

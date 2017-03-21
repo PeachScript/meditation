@@ -1,9 +1,9 @@
-@import '../../node_modules/normalize.css/normalize.css';
 @import 'variables';
+@import 'reset';
 @import 'fonts';
 
 html {
-  background-color: $c-basic;
+  background-color: $c-basic-deep;
   background-image: url('../assets/img/deep_space_bg.svg');
   background-attachment: fixed;
 }
@@ -24,15 +24,15 @@ body {
   }
 }
 
-header {
+.site-header {
   margin: 0 auto;
   max-width: $s-max-width;
   padding-top: 30px;
   text-align: center;
   a {
-    color: $c-white;
     text-decoration: none;
     h1 {
+      color: $c-white;
       margin: 10px 0 5px;
       font-weight: normal;
     }
@@ -71,10 +71,15 @@ header {
   }
 }
 
-.post-list {
+.site-content {
+  $h-gap: 60px;
   margin: 20px auto;
-  padding: 0 60px 50px;
-  max-width: $s-max-width;
+  padding: 0 $h-gap;
+  max-width: $s-max-width + ($h-gap * 2);
+}
+
+.post-list {
+  padding-bottom: 30px;
   .post-item {
     position: relative;
     margin-bottom: 30px;
@@ -93,7 +98,7 @@ header {
     }
     .post-item-content {
       display: block;
-      padding: 10% 0 10%;
+      padding: 13% 0;
       text-decoration: none;
       border: 1px solid $c-white;
       h3 {
@@ -149,11 +154,41 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: $c-basic;
+        background-color: $c-basic-deep;
         opacity: 0;
         visibility: hidden;
         transition: visibility .5s, opacity .5s;
       }
+    }
+  }
+}
+
+.post-detail-wrapper {
+  $gap: 50px;
+  .post-header {
+    position: relative;
+    padding: 15px 2px;
+    h1 {
+      font-size: 40px;
+      color: $c-white;
+    }
+    .post-detail-time {
+      position: absolute;
+      bottom: 15px;
+      right: 0;
+      font-size: 20px;
+      font-family: 'DJB Get Digital';
+      color: $c-white;
+      opacity: .7;
+    }
+  }
+  .post-content {
+    padding: $gap;
+    color: #363c42;
+    background: #f5f6f8;
+    img {
+      margin: 2em auto;
+      display: block;
     }
   }
 }
