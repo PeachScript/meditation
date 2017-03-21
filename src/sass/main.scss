@@ -25,8 +25,9 @@ body {
 }
 
 .site-header {
+  position: relative;
+  z-index: 10;
   margin: 0 auto;
-  max-width: $s-max-width;
   padding-top: 30px;
   text-align: center;
   a {
@@ -68,6 +69,27 @@ body {
         }
       }
     }
+  }
+  .header-cover {
+  }
+}
+
+.post-cover {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 390px;
+  background-size: cover;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, $c-basic-deep, rgba(3,2,27,.6));
   }
 }
 

@@ -16,6 +16,11 @@
       {{navigation}}
     </nav>
   </header>
+  {{#if post}}
+  {{#post}}
+  <div class="post-cover" style="background-image: url('{{image}}');"></div>
+  {{/post}}
+  {{/if}}
   <main class="site-content">
     {{{body}}}
   </main>
