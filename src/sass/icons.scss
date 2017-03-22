@@ -1,0 +1,32 @@
+@font-face {font-family: 'meditation';
+  src: url('../assets/fonts/meditation.eot?t=1490167154417'); /* IE9*/
+  src: url('../assets/fonts/meditation.eot?t=1490167154417#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/fonts/meditation.woff?t=1490167154417') format('woff'), /* chrome, firefox */
+  url('../assets/fonts/meditation.ttf?t=1490167154417') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../assets/fonts/meditation.svg?t=1490167154417#meditation') format('svg'); /* iOS 4.1- */
+}
+
+*[class^=icon-] {
+  font-family: 'meditation'!important;
+  line-height: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-weibo::before { content: '\e619'; }
+
+.icon-qrcode::before { content: '\e61e'; }
+
+.icon-twitter::before { content: '\e606'; }
+
+.icon-douban::before { content: '\e94a'; }
+
+.icon-facebook::before { content: '\e607'; }
+
+.icon-renren::before { content: '\e6b4'; }
+
+.icon-qzone::before { content: '\e62d'; }
+
+.icon-google-plus::before { content: '\e69a'; }
+
