@@ -1,5 +1,8 @@
 {{!< layout}}
 {{#post}}
+{{#if image}}
+<div class="post-cover" style="background-image: url('{{image}}');"></div>
+{{/if}}
 <article class="post-detail-wrapper">
   <header class="post-header">
     <time class="post-detail-time">{{date format="YYYY-MM-DD HH:mm:ss"}}</time>

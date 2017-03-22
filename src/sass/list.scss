@@ -1,0 +1,66 @@
+.post-list {
+  padding-bottom: 30px;
+  .post-item {
+    position: relative;
+    margin-bottom: 30px;
+    &:hover {
+      .post-item-cover {
+        opacity: 1;
+        transform: scale(1);
+        transition: visibility .7s, opacity .7s, transform .7s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-delay: .3s;
+      }
+    }
+    .post-item-content {
+      display: block;
+      padding: 13% 0;
+      text-decoration: none;
+      border: 1px solid $c-white;
+      h3 {
+        font-size: 60px;
+        text-align: center;
+        color: $c-white;
+        font-weight: normal;
+      }
+      time {
+        position: absolute;
+        z-index: $z-bottom;
+        right: 30px;
+        bottom: 15px;
+        font-family: 'DJB Get Digital';
+        font-size: 24px;
+        color: $c-white;
+      }
+    }
+    .post-item-tags {
+      position: absolute;
+      z-index: $z-bottom;
+      left: 30px;
+      bottom: 20px;
+    }
+    .post-item-cover {
+      position: absolute;
+      z-index: -1;
+      top: 1px;
+      right: 1px;
+      left: 1px;
+      bottom: 1px;
+      background-size: cover;
+      opacity: 0;
+      transform: scale(1.1) translateZ(1px);
+      transition: visibility .5s, opacity .5s, transform .5s cubic-bezier(0.55, 0.055, 0.675, 1);
+      pointer-events: none;
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: $z-bottom;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $c-basic-deep;
+        opacity: .76;
+      }
+    }
+  }
+}

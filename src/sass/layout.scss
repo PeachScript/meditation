@@ -1,0 +1,76 @@
+html {
+  background-color: $c-basic-deep;
+  background-image: url('../assets/img/deep_space_bg.svg');
+  background-attachment: fixed;
+}
+body {
+  margin: 0;
+  animation: infinite 8s twinkle;
+}
+
+@keyframes twinkle {
+  0% {
+    background: rgba(3,2,27,.56);
+  }
+  50% {
+    background: rgba(3,2,27,0);
+  }
+  100% {
+    background: rgba(3,2,27,.56);
+  }
+}
+
+.site-header {
+  position: relative;
+  z-index: $z-fixed;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    h1 {
+      color: $c-white;
+      margin: 10px 0 5px;
+      font-weight: normal;
+    }
+    .avatar {
+      $size: 100px;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      border: 3px solid $c-white;
+    }
+  }
+  .description {
+    margin: 5px 0;
+    color: $c-gray;
+  }
+  nav {
+    ul {
+      margin-top: 30px;
+      padding-left: 0;
+      li {
+        margin: 0 20px;
+        display: inline-block;
+        letter-spacing: 2px;
+        text-indent: -2px;
+        text-transform: uppercase;
+        a {
+          display: inline-block;
+          color: $c-white;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.site-content {
+  $h-gap: 60px;
+  margin: 20px auto;
+  padding: 0 $h-gap;
+  max-width: $s-max-width + ($h-gap * 2);
+}

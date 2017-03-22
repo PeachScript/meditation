@@ -1,0 +1,13 @@
+.post-tags {
+  color: $c-gray;
+  a {
+    color: $c-white;
+    text-decoration: none;
+    &::before {
+      content: '[';
+    }
+    &::after {
+      content: ']';
+    }
+  }
+}

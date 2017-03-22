@@ -1,0 +1,47 @@
+.post-cover {
+  position: absolute;
+  z-index: $z-bottom;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 390px;
+  background-size: cover;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, $c-basic-deep, rgba(3,2,27,.6));
+  }
+}
+.post-detail-wrapper {
+  $gap: 50px;
+  .post-header {
+    position: relative;
+    padding: 15px 2px;
+    h1 {
+      font-size: 40px;
+      color: $c-white;
+    }
+    .post-detail-time {
+      position: absolute;
+      bottom: 15px;
+      right: 0;
+      font-size: 20px;
+      font-family: 'DJB Get Digital';
+      color: $c-white;
+      opacity: .7;
+    }
+  }
+  .post-content {
+    padding: $gap;
+    color: #363c42;
+    background: #f5f6f8;
+    img {
+      margin: 2em auto;
+      display: block;
+    }
+  }
+}
