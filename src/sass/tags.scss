@@ -4,10 +4,13 @@
     color: $c-white;
     text-decoration: none;
     &::before {
-      content: '[';
+      content: '<';
     }
     &::after {
-      content: ']';
+      content: '>';
+    }
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

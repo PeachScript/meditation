@@ -6,6 +6,9 @@
 <article class="post-detail-wrapper">
   <header class="post-header">
     <time class="post-detail-time">{{date format="YYYY-MM-DD HH:mm:ss"}}</time>
+    <section class="post-tags post-detail-tags">
+      {{tags separator=" · "}}
+    </section>
     <h1>{{title}}</h1>
   </header>
   <section class="post-content typo">
@@ -48,5 +51,13 @@
       </p>
     </section>
   </footer>
+  <aside class="post-pagination">
+    {{#prev_post}}
+      <a href="{{url}}" class="post-pagination-prev">{{title}}</a>
+    {{/prev_post}}
+    {{#next_post}}
+      <a href="{{url}}" class="post-pagination-next">{{title}}</a>
+    {{/next_post}}
+  </aside>
 </article>
 {{/post}}

@@ -25,11 +25,15 @@
       font-size: 40px;
       color: $c-white;
     }
+    .post-detail-tags {
+      float: right;
+      clear: right;
+      line-height: 1;
+    }
     .post-detail-time {
-      position: absolute;
-      bottom: 15px;
-      right: 0;
+      float: right;
       font-size: 20px;
+      line-height: normal;
       font-family: 'DJB Get Digital';
       color: $c-white;
       opacity: .7;
@@ -80,6 +84,38 @@
         &:hover {
           color: lighten(desaturate($c-basic, 50%), 10%);
         }
+      }
+    }
+  }
+  .post-pagination {
+    padding: 10px 0;
+    overflow: hidden;
+    a {
+      position: relative;
+      max-width: 40%;
+      color: $c-white;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      &::before {
+        position: absolute;
+        top: 0;
+      }
+    }
+    .post-pagination-prev {
+      float: left;
+      padding-left: 20px;
+      &::before {
+        left: 0;
+        content: '←';
+      }
+    }
+    .post-pagination-next {
+      float: right;
+      padding-right: 20px;
+      &::before {
+        right: 0;
+        content: '→';
       }
     }
   }
