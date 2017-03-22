@@ -1,7 +1,7 @@
 {{!< layout}}
 {{#post}}
 {{#if image}}
-<div class="post-cover" style="background-image: url('{{image}}');"></div>
+<figure class="post-cover" style="background-image: url('{{image}}');"></figure>
 {{/if}}
 <article class="post-detail-wrapper">
   <header class="post-header">
@@ -11,5 +11,42 @@
   <section class="post-content typo">
     {{content}}
   </section>
+  <footer class="post-footer">
+    <section class="post-copyright">
+      <p>版权声明：署名-非商业性使用-禁止演绎(CC BY-NC-ND)</p>
+      <p>　许可证：<a target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创意共享 4.0 许可证</a></p>
+    </section>
+    <section class="post-share">
+      <h4>SHARE</h4>
+      <p>
+        <a href="javascript:;">
+          <i class="icon-douban"></i>
+        </a>
+        <a href="javascript:;">
+          <i class="icon-weibo"></i>
+        </a>
+        <a href="javascript:;">
+          <i class="icon-renren"></i>
+        </a>
+        <a href="javascript:;">
+          <i class="icon-qzone"></i>
+        </a>
+      </p>
+      <p>
+        <a href="javascript:;">
+          <i class="icon-google-plus"></i>
+        </a>
+        <a href="javascript:;">
+          <i class="icon-facebook"></i>
+        </a>
+        <a href="javascript:;">
+          <i class="icon-twitter"></i>
+        </a>
+        <a href="javascript:;">
+          <i class="icon-qrcode"></i>
+        </a>
+      </p>
+    </section>
+  </footer>
 </article>
 {{/post}}

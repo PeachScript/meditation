@@ -36,12 +36,51 @@
     }
   }
   .post-content {
-    padding: $gap;
+    padding: $gap $gap 10px;
     color: #363c42;
-    background: #f5f6f8;
+    background-color: #f5f6f8;
     img {
       margin: 2em auto;
       display: block;
+    }
+  }
+  .post-footer {
+    padding: $gap;
+    background-color: #f5f6f8;
+    .post-copyright {
+      display: inline-block;
+      max-width: 60%;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: lighten(desaturate($c-basic, 50%), 50%);
+      border: 1px solid lighten(desaturate($c-basic, 50%), 40%);
+    }
+    .post-share {
+      float: right;
+      text-align: right;
+      h4 {
+        margin-bottom: 3px;
+        font-weight: bold;
+        color: lighten(desaturate($c-basic, 50%), 40%);
+      }
+      p {
+        line-height: 1;
+      }
+      a {
+        $size: 24px;
+        margin-left: 5px;
+        display: inline-block;
+        width: $size;
+        height: $size;
+        font-size: $size * .9;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        color: lighten(desaturate($c-basic, 50%), 20%);
+        &:hover {
+          color: lighten(desaturate($c-basic, 50%), 10%);
+        }
+      }
     }
   }
 }
