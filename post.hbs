@@ -6,15 +6,15 @@
 <article class="post-detail-wrapper">
   <header class="post-header">
     <time class="post-detail-time">{{date format="YYYY-MM-DD HH:mm:ss"}}</time>
-    <section class="post-tags post-detail-tags">
-      {{tags separator=" · "}}
-    </section>
     <h1>{{title}}</h1>
   </header>
   <section class="post-content typo">
     {{content}}
   </section>
   <footer class="post-footer">
+    <section class="post-tags post-detail-tags">
+      {{tags separator=" · "}}
+    </section>
     <section class="post-copyright">
       <p>版权声明：署名-非商业性使用-禁止演绎(CC BY-NC-ND)</p>
       <p>　许可证：<a target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">创意共享 4.0 许可证</a></p>

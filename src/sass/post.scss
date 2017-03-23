@@ -25,13 +25,10 @@
       font-size: 40px;
       color: $c-white;
     }
-    .post-detail-tags {
-      float: right;
-      clear: right;
-      line-height: 1;
-    }
     .post-detail-time {
-      float: right;
+      position: absolute;
+      right: 0;
+      bottom: 20px;
       font-size: 20px;
       line-height: normal;
       font-family: 'DJB Get Digital';
@@ -49,8 +46,14 @@
     }
   }
   .post-footer {
-    padding: $gap;
+    padding: 10px $gap $gap;
     background-color: #f5f6f8;
+    .post-detail-tags {
+      margin: 15px 0;
+      a {
+        color: lighten(desaturate($c-basic, 50%), 10%);
+      }
+    }
     .post-copyright {
       display: inline-block;
       max-width: 60%;
