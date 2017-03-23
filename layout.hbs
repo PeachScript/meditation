@@ -19,6 +19,13 @@
   <main class="site-content">
     {{{body}}}
   </main>
+  <footer class="site-footer">
+    &copy;
+    {{date format="YYYY"}}
+    <a href="{{@blog.url}}">{{@blog.title}}</a>.
+    All rights reserved.
+    Built with <a href="https://github.com/PeachScript/meditation" target="_blank">meditation</a> under <a href="https://ghost.org" target="_blank">Ghost</a>.
+  </footer>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>

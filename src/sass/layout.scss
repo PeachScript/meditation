@@ -74,3 +74,13 @@ body {
   padding: 0 $h-gap;
   max-width: $s-max-width + ($h-gap * 2);
 }
+
+.site-footer {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: $c-gray;
+  a {
+    color: $c-white;
+  }
+}
