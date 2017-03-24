@@ -1,0 +1,23 @@
+{{!< layout}}
+{{#if tag.image}}
+<figure class="header-cover" style="background-image: url('{{tag.image}}');"></figure>
+{{else}}
+{{#if @blog.cover}}
+<figure class="header-cover" style="background-image: url('{{@blog.cover}}');"></figure>
+{{/if}}
+{{/if}}
+{{#tag}}
+<header class="tag-header">
+  <h1>
+    &lt;{{name}}&gt;
+    <small>
+      {{#if description}}
+      {{description}}
+      {{else}}
+      Total: {{../pagination.total}}
+      {{/if}}
+    </small>
+  </h1>
+</header>
+{{/tag}}
+{{> "post_list"}}

@@ -1,0 +1,38 @@
+.tag-header {
+  padding: 0 2px 15px;
+  h1 {
+    position: relative;
+    padding-right: 60%;
+    font-size: 40px;
+    color: $c-white;
+    small {
+      position: absolute;
+      max-width: 60%;
+      right: 0;
+      bottom: 5px;
+      font-size: 40%;
+      color: $c-gray;
+      text-align: right;
+    }
+  }
+  + .post-list {
+    padding-top: 0;
+  }
+}
+
+.post-tags {
+  color: $c-gray;
+  a {
+    color: $c-white;
+    text-decoration: none;
+    &::before {
+      content: '<';
+    }
+    &::after {
+      content: '>';
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
