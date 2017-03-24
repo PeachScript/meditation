@@ -1,4 +1,6 @@
 .post-detail-wrapper {
+  position: relative;
+  z-index: $z-little;
   $gap: 50px;
   .post-header {
     position: relative;

@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "normalize.css": "^5.0.0",
+    "qrcodejs3": "^1.0.0",
     "typo.css": "^2.1.2"
   }
 }
