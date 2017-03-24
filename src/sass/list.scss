@@ -13,14 +13,19 @@
     }
     .post-item-content {
       display: block;
-      padding: 13% 0;
+      padding: 18% 0;
       text-decoration: none;
       border: 1px solid $c-white;
       h3 {
-        font-size: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        font-size: 50px;
         text-align: center;
         color: $c-white;
         font-weight: normal;
+        transform: translateX(-50%) translateY(-50%) translateZ(30px);
       }
       time {
         position: absolute;
