@@ -18,6 +18,17 @@
   + .post-list {
     padding-top: 0;
   }
+  @include responsive('pad') {
+    padding-bottom: 10px;
+    h1 {
+      margin: 0 10px;
+      font-size: 30px;
+      small {
+        bottom: 0;
+        font-size: 50%;
+      }
+    }
+  }
 }
 
 .post-tags {

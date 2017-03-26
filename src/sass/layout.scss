@@ -66,6 +66,30 @@ body {
       }
     }
   }
+  @include responsive('pad') {
+    padding-top: 15px;
+    a {
+      .avatar {
+        $size: 80px;
+        width: $size;
+        height: $size;
+        border-width: 2px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+    .description {
+      margin: 0;
+    }
+    nav ul {
+      margin-top: 5px;
+    }
+  }
+  @include responsive('phone') {
+    padding: 0;
+  }
 }
 
 .site-content {
@@ -73,15 +97,22 @@ body {
   margin: 20px auto;
   padding: 0 $h-gap;
   max-width: $s-max-width + ($h-gap * 2);
+  @include responsive('pad') {
+    margin: 10px auto;
+    padding: 0;
+  }
 }
 
 .site-footer {
-  margin-bottom: 20px;
+  margin: 20px 0;
   text-align: center;
   font-size: 14px;
   color: $c-gray;
   a {
     color: $c-white;
+  }
+  @include responsive('pad') {
+    margin: 10px 0;
   }
 }
 

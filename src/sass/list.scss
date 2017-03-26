@@ -1,5 +1,5 @@
 .post-list {
-  padding: 30px 0;
+  padding: 20px 0 0;
   .post-item {
     position: relative;
     margin-bottom: 30px;
@@ -52,7 +52,7 @@
       bottom: 1px;
       background-size: cover;
       opacity: 0;
-      transform: scale(1.1) translateZ(1px);
+      transform: scale(1.08) translateZ(1px);
       transition: visibility .5s, opacity .5s, transform .5s cubic-bezier(0.55, 0.055, 0.675, 1);
       pointer-events: none;
       &::after {
@@ -65,6 +65,26 @@
         bottom: 0;
         background-color: $c-basic-deep;
         opacity: .76;
+      }
+    }
+  }
+  @include responsive('pad') {
+    padding: 10px 10px 0;
+    .post-item {
+      margin-bottom: 10px;
+      .post-item-content {
+        h3 {
+          font-size: 38px;
+        }
+        time {
+          right: 20px;
+          bottom: 5px;
+          font-size: 18px;
+        }
+      }
+      .post-item-tags {
+        left: 20px;
+        bottom: 10px;
       }
     }
   }

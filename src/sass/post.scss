@@ -12,7 +12,7 @@
     .post-detail-time {
       position: absolute;
       right: 0;
-      bottom: 20px;
+      bottom: 16px;
       font-size: 20px;
       line-height: normal;
       font-family: 'DJB Get Digital';
@@ -76,5 +76,26 @@
   }
   .post-pagination {
     padding: 10px 0;
+  }
+  @include responsive('pad') {
+    $gap: 25px;
+    .post-header {
+      margin: 0 $gap;
+      padding: 0 150px 5px 0;
+      h1 {
+        font-size: 34px;
+      }
+      .post-detail-time {
+        position: absolute;
+        bottom: 8px;
+        font-size: 16px;
+      }
+    }
+    .post-content {
+      padding: $gap $gap 10px;
+    }
+    .post-footer {
+      padding: 10px $gap $gap;
+    }
   }
 }
