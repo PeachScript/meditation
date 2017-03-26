@@ -68,6 +68,25 @@
       }
     }
   }
+  @include responsive('normal') {
+    .post-item {
+      margin-bottom: 10px;
+      .post-item-content {
+        h3 {
+          font-size: 44px;
+        }
+        time {
+          right: 20px;
+          bottom: 10px;
+          font-size: 20px;
+        }
+      }
+      .post-item-tags {
+        left: 20px;
+        bottom: 15px;
+      }
+    }
+  }
   @include responsive('pad') {
     padding: 10px 10px 0;
     .post-item {

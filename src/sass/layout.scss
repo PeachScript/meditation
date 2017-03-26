@@ -97,6 +97,10 @@ body {
   margin: 20px auto;
   padding: 0 $h-gap;
   max-width: $s-max-width + ($h-gap * 2);
+  @include responsive('normal') {
+    padding: 0 30px;
+    overflow: hidden;
+  }
   @include responsive('pad') {
     margin: 10px auto;
     padding: 0;

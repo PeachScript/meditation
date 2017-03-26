@@ -8,8 +8,8 @@
       @content;
     }
   }
-  @else if ($type == 'normal') and (max-width: $r-large) {
-    @media (min-width: $r-normal) {
+  @else if ($type == 'normal') {
+    @media (min-width: $r-normal) and (max-width: $r-large) {
       @content;
     }
   }
