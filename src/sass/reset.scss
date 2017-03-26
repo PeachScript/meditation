@@ -6,6 +6,11 @@ blockquote {
   border-left: 2px solid $c-basic;
 }
 
+pre {
+  padding: 0;
+  line-height: 1.4;
+}
+
 a {
   color: $c-basic;
 }

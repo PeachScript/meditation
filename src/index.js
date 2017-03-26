@@ -1,3 +1,4 @@
+import hljs from './assets/lib/highlightjs/highlight.pack';
 import Parallax from './js/parallax';
 import Share from './js/share';
 
@@ -27,3 +28,8 @@ if (document.querySelector('.post-detail-wrapper .post-share')) {
     }
   });
 })();
+
+/**
+ * Enable hightlighjs
+ */
+hljs.initHighlightingOnLoad();

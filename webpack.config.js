@@ -10,6 +10,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /highlight\.pack\.js$/,
+        use: ['exports-loader?hljs', 'script-loader'],
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
