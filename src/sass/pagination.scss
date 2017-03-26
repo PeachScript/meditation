@@ -2,6 +2,9 @@
   text-align: center;
   color: $c-white;
   overflow: hidden;
+  &:empty {
+    display: none;
+  }
   a {
     position: relative;
     max-width: 40%;
