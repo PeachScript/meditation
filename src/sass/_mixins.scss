@@ -1,0 +1,26 @@
+/**
+ * Responsive tool mixin
+ * @param  {String} $type responsive target
+ */
+@mixin responsive($type) {
+  @if ($type == 'large') {
+    @media (min-width: $r-large) {
+      @content;
+    }
+  }
+  @else if ($type == 'normal') and (max-width: $r-large) {
+    @media (min-width: $r-normal) {
+      @content;
+    }
+  }
+  @else if ($type == 'pad') {
+    @media (min-width: $r-pad) and (max-width: $r-normal) {
+      @content;
+    }
+  }
+  @else if ($type == 'phone') {
+    @media (max-width: $r-pad) {
+      @content;
+    }
+  }
+}
