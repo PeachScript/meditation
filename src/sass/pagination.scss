@@ -37,4 +37,8 @@
       content: '→';
     }
   }
+  @include responsive('phone') {
+    margin: 0 10px;
+    font-size: 14px;
+  }
 }

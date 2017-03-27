@@ -1,6 +1,12 @@
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../../node_modules/typo.css/typo.css';
 
+html {
+  * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+}
+
 // override styles for typo.css
 blockquote {
   border-left: 2px solid $c-basic;

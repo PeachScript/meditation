@@ -29,6 +29,18 @@
       }
     }
   }
+  @include responsive('phone') {
+    padding-bottom: 5px;
+    h1 {
+      margin: 0 10px;
+      font-size: 18px;
+      font-weight: 200;
+      small {
+        bottom: 0;
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .post-tags {

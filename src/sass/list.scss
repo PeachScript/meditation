@@ -24,14 +24,14 @@
         font-size: 50px;
         text-align: center;
         color: $c-white;
-        font-weight: normal;
+        font-weight: 300;
         transform: translateX(-50%) translateY(-50%) translateZ(30px);
       }
       time {
         position: absolute;
         z-index: $z-bottom;
         right: 30px;
-        bottom: 15px;
+        bottom: 12px;
         font-family: 'DJB Get Digital';
         font-size: 24px;
         color: $c-white;
@@ -42,6 +42,9 @@
       z-index: $z-bottom;
       left: 30px;
       bottom: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     .post-item-cover {
       position: absolute;
@@ -104,6 +107,28 @@
       .post-item-tags {
         left: 20px;
         bottom: 10px;
+      }
+    }
+  }
+  @include responsive('phone') {
+    padding-top: 0;
+    .post-item {
+      margin-bottom: 10px;
+      .post-item-content {
+        h3 {
+          font-size: 18px;
+        }
+        time {
+          right: 10px;
+          bottom: 0;
+          font-size: 14px;
+        }
+      }
+      .post-item-tags {
+        right: 140px;
+        left: 10px;
+        bottom: 5px;
+        font-size: 12px;
       }
     }
   }

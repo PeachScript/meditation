@@ -28,18 +28,20 @@ body {
   text-align: center;
   a {
     text-decoration: none;
-    h1 {
+  }
+  h1 {
+    margin: 10px 0 5px;
+    font-weight: 300;
+    a {
       color: $c-white;
-      margin: 10px 0 5px;
-      font-weight: normal;
     }
-    .avatar {
-      $size: 100px;
-      width: $size;
-      height: $size;
-      border-radius: 50%;
-      border: 3px solid $c-white;
-    }
+  }
+  .avatar {
+    $size: 100px;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: 3px solid $c-white;
   }
   .description {
     margin: 5px 0;
@@ -59,6 +61,7 @@ body {
           display: inline-block;
           color: $c-white;
           text-decoration: none;
+          white-space: nowrap;
           &:hover {
             text-decoration: underline;
           }
@@ -68,17 +71,15 @@ body {
   }
   @include responsive('pad') {
     padding-top: 15px;
-    a {
-      .avatar {
-        $size: 80px;
-        width: $size;
-        height: $size;
-        border-width: 2px;
-      }
-      h1 {
-        margin: 0;
-        font-size: 20px;
-      }
+    .avatar {
+      $size: 80px;
+      width: $size;
+      height: $size;
+      border-width: 2px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 20px;
     }
     .description {
       margin: 0;
@@ -88,22 +89,50 @@ body {
     }
   }
   @include responsive('phone') {
-    padding: 0;
+    padding: 15px 10px 0;
+    text-align: left;
+    font-size: 14px;
+    .avatar {
+      $size: 40px;
+      float: left;
+      margin-right: 15px;
+      width: $size;
+      height: $size;
+      border-width: 2px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .description {
+      margin: 0;
+    }
+    nav {
+      text-align: center;
+      ul {
+        margin-top: 5px;
+        li {
+          margin: 0 10px;
+        }
+      }
+    }
   }
 }
 
 .site-content {
   $h-gap: 60px;
-  margin: 20px auto;
-  padding: 0 $h-gap;
+  margin: 0 auto;
+  padding: 20px $h-gap;
   max-width: $s-max-width + ($h-gap * 2);
+  overflow: hidden;
   @include responsive('normal') {
-    padding: 0 30px;
-    overflow: hidden;
+    padding: 20px 30px;
   }
   @include responsive('pad') {
-    margin: 10px auto;
-    padding: 0;
+    padding: 10px 0;
+  }
+  @include responsive('phone') {
+    padding: 10px 0 0;
   }
 }
 
@@ -117,6 +146,10 @@ body {
   }
   @include responsive('pad') {
     margin: 10px 0;
+  }
+  @include responsive('phone') {
+    margin: 10px 0;
+    line-height: 1.2;
   }
 }
 
@@ -144,6 +177,12 @@ body {
     height: 260px;
     &.index-cover {
       height: 220px;
+    }
+  }
+  @include responsive('phone') {
+    height: 160px;
+    &.index-cover {
+      height: 120px;
     }
   }
 }

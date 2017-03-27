@@ -4,7 +4,7 @@
   $gap: 50px;
   .post-header {
     position: relative;
-    padding: 0 150px 15px 2px;
+    padding: 0 160px 15px 2px;
     h1 {
       font-size: 40px;
       color: $c-white;
@@ -86,7 +86,6 @@
         font-size: 34px;
       }
       .post-detail-time {
-        position: absolute;
         bottom: 8px;
         font-size: 16px;
       }
@@ -96,6 +95,43 @@
     }
     .post-footer {
       padding: 10px $gap $gap;
+    }
+  }
+  @include responsive('phone') {
+    $gap: 15px;
+    .post-header {
+      margin: 0 $gap;
+      padding: 0 0 5px;
+      h1 {
+        font-size: 20px;
+        font-weight: 200;
+      }
+      .post-detail-time {
+        position: static;
+        font-size: 16px;
+      }
+    }
+    .post-content {
+      padding: $gap $gap 10px;
+      line-height: 1.4;
+      img {
+        margin: 1em auto;
+      }
+    }
+    .post-footer {
+      padding: 10px $gap $gap;
+      .post-copyright {
+        max-width: 100%;
+      }
+      .post-share {
+        margin: 10px 0;
+        float: none;
+        text-align: center;
+      }
+      .post-detail-tags {
+        margin: 10px 0;
+        font-size: 14px;
+      }
     }
   }
 }

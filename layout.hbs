@@ -12,10 +12,10 @@
 </head>
 <body>
   <header class="site-header">
-    <a href="/">
+    <a href="{{@blog.url}}">
       <img src="{{@blog.logo}}" class="avatar" alt="avatar">
-      <h1>{{@blog.title}}</h1>
     </a>
+    <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
     <p class="description">{{@blog.description}}</p>
     <nav>
       {{navigation}}
