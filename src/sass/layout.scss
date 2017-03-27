@@ -137,4 +137,13 @@ body {
     bottom: 0;
     background: linear-gradient(to top, $c-basic-deep, rgba(3,2,27,.6));
   }
+  &.index-cover {
+    height: 310px;
+  }
+  @include responsive('pad') {
+    height: 260px;
+    &.index-cover {
+      height: 220px;
+    }
+  }
 }
