@@ -50,14 +50,14 @@ function Parallax(wrapper, rotateRatio = 10) {
   })());
 
   // Get child parallax elements and sort them
-  this.parallaxElms = Array.prototype.sort.call(this.wrapper.querySelectorAll('*[role^="parallax"]'), (prev, next) => {
+  this.parallaxElms = [...this.wrapper.querySelectorAll('*[role^="parallax"]')].sort((prev, next) => {
     const prevIndex = prev.getAttribute('role').split('-')[1] || 0;
     const nextIndex = next.getAttribute('role').split('-')[1] || 0;
     return prevIndex - nextIndex;
   });
 
   // Initilize child parallax elements
-  Array.prototype.forEach.call(this.parallaxElms, (elm, i) => {
+  this.parallaxElms.forEach((elm, i) => {
     elm.style.transform = `translateZ(${(i + 1) * 15}px)`; // eslint-disable-line no-param-reassign
     elm.style.webkitTransform = elm.style.transform; // eslint-disable-line no-param-reassign
     elm.style.MozTransform = elm.style.transform; // eslint-disable-line no-param-reassign
