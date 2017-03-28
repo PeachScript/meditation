@@ -5,12 +5,49 @@
  */
 
 /**
+ * start event handle
+ * @param  {Event} ev  event object
+ */
+function startHandler(ev) {
+  const wrapperHalfWidth = parseInt(getComputedStyle(this.wrapper).width, 10) / 2;
+  const wrapperHalfHeight = parseInt(getComputedStyle(this.wrapper).height, 10) / 2;
+  const offsetX = (ev.pageX || ev.touches[0].pageX) - this.wrapper.offsetLeft;
+  const offsetY = (ev.pageY || ev.touches[0].pageY) - this.wrapper.offsetTop;
+
+  this.wrapper.style.transform = `rotateX(${(wrapperHalfHeight - offsetY) / this.rotateRatio}deg) rotateY(${(offsetX - wrapperHalfWidth) / this.rotateRatio}deg)`;
+  this.wrapper.style.webkitTransform = this.wrapper.style.transform;
+  this.wrapper.style.msTransform = this.wrapper.style.transform;
+  this.wrapper.style.MozTransform = this.wrapper.style.transform;
+  this.wrapper.style.OTransform = this.wrapper.style.transform;
+}
+
+/**
+ * end event handler
+ */
+function endHandler() {
+  this.wrapper.style.transform = 'rotateX(0) rotateY(0)';
+  this.wrapper.style.webkitTransform = this.wrapper.style.transform;
+  this.wrapper.style.msTransform = this.wrapper.style.transform;
+  this.wrapper.style.MozTransform = this.wrapper.style.transform;
+  this.wrapper.style.OTransform = this.wrapper.style.transform;
+}
+
+/**
  * Initilize
  * @param {DOM}     wrapper     parallax wrapper
  * @param {Number}  rotateRatio transform ratio between the rotate and mousemove
  */
 function Parallax(wrapper, rotateRatio = 10) {
   this.wrapper = wrapper;
+
+  // Recalculate rotateRatio
+  window.addEventListener('resize', (() => {
+    function setRatio() {
+      this.rotateRatio = rotateRatio / (1280 / document.documentElement
+                                                       .getBoundingClientRect().width);
+    }
+    return setRatio.bind(this)() || setRatio.bind(this);
+  })());
 
   // Get child parallax elements and sort them
   this.parallaxElms = Array.prototype.sort.call(this.wrapper.querySelectorAll('*[role^="parallax"]'), (prev, next) => {
@@ -42,27 +79,13 @@ function Parallax(wrapper, rotateRatio = 10) {
   this.wrapper.style.OTransition = `${getComputedStyle(this.wrapper).OTransition}, -o-transform .1s linear`;
 
   // Handle mousemove
-  this.wrapper.addEventListener('mousemove', (ev) => {
-    const wrapperHalfWidth = parseInt(getComputedStyle(this.wrapper).width, 10) / 2;
-    const wrapperHalfHeight = parseInt(getComputedStyle(this.wrapper).height, 10) / 2;
-    const offsetX = ev.pageX - this.wrapper.offsetLeft;
-    const offsetY = ev.pageY - this.wrapper.offsetTop;
-
-    this.wrapper.style.transform = `rotateX(${(wrapperHalfHeight - offsetY) / rotateRatio}deg) rotateY(${(offsetX - wrapperHalfWidth) / rotateRatio}deg)`;
-    this.wrapper.style.webkitTransform = this.wrapper.style.transform;
-    this.wrapper.style.msTransform = this.wrapper.style.transform;
-    this.wrapper.style.MozTransform = this.wrapper.style.transform;
-    this.wrapper.style.OTransform = this.wrapper.style.transform;
-  });
+  this.wrapper.addEventListener('mousemove', startHandler.bind(this));
+  this.wrapper.addEventListener('touchmove', startHandler.bind(this));
+  this.wrapper.addEventListener('touchstart', startHandler.bind(this));
 
   // Handle mouseleave
-  this.wrapper.addEventListener('mouseleave', () => {
-    this.wrapper.style.transform = 'rotateX(0) rotateY(0)';
-    this.wrapper.style.webkitTransform = this.wrapper.style.transform;
-    this.wrapper.style.msTransform = this.wrapper.style.transform;
-    this.wrapper.style.MozTransform = this.wrapper.style.transform;
-    this.wrapper.style.OTransform = this.wrapper.style.transform;
-  });
+  this.wrapper.addEventListener('mouseleave', endHandler.bind(this));
+  this.wrapper.addEventListener('touchend', endHandler.bind(this));
 }
 
 export default Parallax;
