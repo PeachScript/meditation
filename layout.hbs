@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{asset "css/main.css"}}">
   {{ghost_head}}
 </head>
-<body>
+<body class="{{body_class}}">
   <header class="site-header">
     <a href="{{@blog.url}}">
       <img src="{{@blog.logo}}" class="avatar" alt="avatar">
@@ -22,7 +22,7 @@
       {{navigation}}
     </nav>
   </header>
-  <main class="site-content">
+  <main class="site-content" role="main">
     {{{body}}}
   </main>
   <footer class="site-footer">
