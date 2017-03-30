@@ -28,6 +28,12 @@
       margin: 2em auto;
       display: block;
     }
+    code {
+      padding: 0 4px;
+    }
+    a {
+      margin: 0 4px;
+    }
   }
   .post-footer {
     padding: 10px $gap $gap;
@@ -68,7 +74,28 @@
         text-align: center;
         text-decoration: none;
         color: lighten(desaturate($c-basic, 50%), 20%);
-        &:hover {
+        .icon-douban:hover {
+          color: #279738;
+        }
+        .icon-weibo:hover {
+          color: #EE1224;
+        }
+        .icon-renren:hover {
+          color: #187BC9;
+        }
+        .icon-qzone:hover {
+          color: #FFC100;
+        }
+        .icon-google-plus:hover {
+          color: #DD4330;
+        }
+        .icon-facebook:hover {
+          color: #4760A5;
+        }
+        .icon-twitter:hover {
+          color: #50ABF1;
+        }
+        .icon-qrcode:hover {
           color: lighten(desaturate($c-basic, 50%), 10%);
         }
       }
