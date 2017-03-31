@@ -1,7 +1,7 @@
 # meditation
 [![version](https://img.shields.io/github/release/PeachScript/meditation.svg)]() [![downloads](https://img.shields.io/github/downloads/PeachScript/meditation/total.svg)]() [![license](https://img.shields.io/github/license/PeachScript/meditation.svg)]()
 
-(WIP) A deep and refined theme for the Ghost blog engine.
+A deep and refined theme for the Ghost blog engine.
 
 ## Features
 
