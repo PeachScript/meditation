@@ -1,6 +1,39 @@
 # meditation
+[![version](https://img.shields.io/github/release/PeachScript/meditation.svg)]() [![downloads](https://img.shields.io/github/downloads/PeachScript/meditation/total.svg)]() [![license](https://img.shields.io/github/license/PeachScript/meditation.svg)]()
 
 (WIP) A deep and refined theme for the Ghost blog engine.
+
+## Features
+
+- Responsive
+- QRCode share
+- Social share buttons
+- Focus on reading experience (base on [typo.css](https://github.com/sofish/typo.css/))
+- Source code highlight (base on [highlight.js](https://github.com/isagalaev/highlight.js))
+
+## Installation
+
+1. Download the latest version from release page;
+2. Unzip into `path/to/your/ghost/content/themes` folder;
+3. Activate `mediation` in the `Ghost` General settings.
+
+## Development setup
+
+```bash
+# install dependencies
+npm install
+
+# start webpack-dev-server
+npm run dev
+```
+
+## Thanks to
+
+1. [typo.css](https://github.com/sofish/typo.css/)
+2. [highlight.js](https://github.com/isagalaev/highlight.js)
+3. [normalize.css](https://github.com/necolas/normalize.css/)
+4. [qrcodejs](https://github.com/davidshimjs/qrcodejs)
+5. [webpack](https://github.com/webpack/webpack)
 
 ## License
 
