@@ -28,9 +28,6 @@
       margin: 2em auto;
       display: block;
     }
-    code {
-      padding: 0 4px;
-    }
     a {
       margin: 0 4px;
     }
@@ -139,7 +136,7 @@
       }
     }
     .post-content {
-      padding: $gap $gap 10px;
+      padding: ($gap + 10) $gap 10px;
       line-height: 1.4;
       img {
         margin: 1em auto;
