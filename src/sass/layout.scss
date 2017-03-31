@@ -5,19 +5,6 @@ html {
 }
 body {
   margin: 0;
-  // animation: infinite 8s twinkle;
-}
-
-@keyframes twinkle {
-  0% {
-    background: rgba(3,2,27,.56);
-  }
-  50% {
-    background: rgba(3,2,27,0);
-  }
-  100% {
-    background: rgba(3,2,27,.56);
-  }
 }
 
 .site-header {
