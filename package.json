@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "webpack -w --progress --hide-modules --devtool cheap-source-map",
     "build": "webpack -p --progress --hide-modules",
+    "release": "bash ./release.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
