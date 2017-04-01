@@ -3,6 +3,8 @@
 
 A deep and refined theme for the Ghost blog engine.
 
+You can see a [demo](http://www.peachis.me/) in my own blog.
+
 ## Features
 
 - Responsive
@@ -34,6 +36,7 @@ npm run dev
 3. [normalize.css](https://github.com/necolas/normalize.css/)
 4. [qrcodejs](https://github.com/davidshimjs/qrcodejs)
 5. [webpack](https://github.com/webpack/webpack)
+6. [uno-zen](https://github.com/Kikobeats/uno-zen)
 
 ## License
 
