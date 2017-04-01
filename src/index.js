@@ -17,7 +17,7 @@ if (document.querySelector('.post-detail-wrapper .post-share')) {
 }
 
 /**
- *  Set target to new windows for all hyperlinks in the post content
+ * Set target to new window for all hyperlinks in the post content
  */
 (() => {
   const links = document.querySelectorAll('.post-content a');
