@@ -19,6 +19,61 @@ You can see a [demo](http://www.peachis.me/) in my own blog.
 2. Unzip into `path/to/your/ghost/content/themes` folder;
 3. Activate `mediation` in the `Ghost` General settings.
 
+## Configuration
+
+You can configure share buttons and copyright information with `$meditationTool` by the Ghost code injection feature:
+
+Write configuration code in Ghost Admin > Settings -> Code Injection -> Blog Footer:
+```javascript
+<script>
+  $meditationTool.setShareButtons(['FACEBOOK', 'TWITTER'])
+                 .setCopyright('<p>Author: PeachScript</p>');
+</script>
+```
+
+### $meditationTool
+
+#### methods
+
+**setShareButtons**
+
+Configure share buttons in the post page. Support the following enumeration values:
+
+| Name     | Meaning                                  |
+| -------- | ---------------------------------------- |
+| DOUBAN   | Add the [Douban](https://www.douban.com) share button |
+| WEIBO    | Add the [Weibo](https://www.weibo.com) share button |
+| RENREN   | Add the [Renren](http://www.renren.com) share button |
+| QZONE    | Add the [QQ Zone](https://qzone.qq.com) share button |
+| GPLUS    | Add the [Google Plus](https://plus.google.com) share button |
+| FACEBOOK | Add the [Facebook](https://www.facebook.com) share button |
+| TWITTER  | Add the [Twitter](https://www.twitter.com) share button |
+| QRCODE   | Add the QRCode button to share by mobile phone |
+
+Usage:
+```javascript
+// Passing an array to set share buttons
+$meditationTool.setShareButtons(['GPLUS', 'FACEBOOK']);
+
+// You also can passing a two-dimensional array to render multi-line share buttons
+$meditationTool.setShareButtons([
+  ['FACEBOOK'],
+  ['GPLUS', 'TWITTER'],
+  ['DOUBAN', 'WEIBO', 'RENREN']
+]);
+```
+
+**setCopyright**
+
+Configure copyright information in the post page. Support HTML tags.
+
+*Notice: For security you only can call the method once in synchronized manner.*
+
+Usage:
+```javascript
+$meditationTool.setCopyright('<p>Any code you want to insert to the copyright label</p>');
+```
+
 ## Development setup
 
 ```bash
