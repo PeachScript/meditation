@@ -3,6 +3,8 @@
 
 A deep and refined theme for the Ghost blog engine.
 
+![preview](http://www.peachis.me/assets/meditation/preview.png)
+
 You can see a [demo](http://www.peachis.me/) in my own blog.
 
 ## Features
