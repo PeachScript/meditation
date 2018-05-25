@@ -8,8 +8,8 @@
     <div class="post-tags post-item-tags" role="parallax-1">
       {{tags separator=" · "}}
     </div>
-    {{#if image}}
-    <div class="post-item-cover" style="background-image: url('{{image}}');"></div>
+    {{#if feature_image}}
+    <div class="post-item-cover" style="background-image: url('{{img_url feature_image}}');"></div>
     {{/if}}
   </article>
   {{/foreach}}

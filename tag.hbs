@@ -1,9 +1,9 @@
-{{!< layout}}
-{{#if tag.image}}
-<figure class="header-cover" style="background-image: url('{{tag.image}}');"></figure>
+{{!< default}}
+{{#if tag.feature_image}}
+<figure class="header-cover" style="background-image: url('{{img_url tag.feature_image}}');"></figure>
 {{else}}
-{{#if @blog.cover}}
-<figure class="header-cover" style="background-image: url('{{@blog.cover}}');"></figure>
+{{#if @blog.cover_image}}
+<figure class="header-cover" style="background-image: url('{{@blog.cover_image}}');"></figure>
 {{/if}}
 {{/if}}
 {{#tag}}

@@ -1,7 +1,7 @@
-{{!< layout}}
+{{!< default}}
 {{#post}}
-{{#if image}}
-<figure class="header-cover" style="background-image: url('{{image}}');"></figure>
+{{#if feature_image}}
+<figure class="header-cover" style="background-image: url('{{img_url feature_image}}');"></figure>
 {{/if}}
 <article class="post-detail-wrapper {{post_class}}">
   {{^if page}}

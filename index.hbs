@@ -1,5 +1,5 @@
-{{!< layout}}
-{{#if @blog.cover}}
-<figure class="header-cover index-cover" style="background-image: url('{{@blog.cover}}');"></figure>
+{{!< default}}
+{{#if @blog.cover_image}}
+<figure class="header-cover index-cover" style="background-image: url('{{@blog.cover_image}}');"></figure>
 {{/if}}
 {{> "post_list"}}

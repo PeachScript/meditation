@@ -18,7 +18,10 @@
     "Ghost",
     "Ghost blog engine"
   ],
-  "author": "Peach <scdzwyxst@gmail.com>",
+  "author": {
+    "name": "Peach",
+    "email": "scdzwyxst@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PeachScript/meditation/issues"
@@ -55,5 +58,8 @@
     "> 5%",
     "last 4 versions",
     "last 4 Android versions"
-  ]
+  ],
+  "config": {
+    "posts_per_page": 5
+  }
 }
