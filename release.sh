@@ -17,8 +17,8 @@ if [[ $REPLY =~ ^[Yy]$ ]] || [[ $REPLY = "" ]]; then
   npm version $VERSION -m "Release $VERSION 🎉 🎉"
   npm run build
 
-  zip -rq "./dist/meditation-${VERSION}.zip" LICENSE README.md package.json tag.hbs post.hbs layout.hbs index.hbs assets partials
-  tar -czf "./dist/meditation-${VERSION}.tar.gz" LICENSE README.md package.json tag.hbs post.hbs layout.hbs index.hbs assets partials
+  zip -rq "./dist/meditation-${VERSION}.zip" LICENSE README.md package.json tag.hbs post.hbs default.hbs index.hbs assets partials
+  tar -czf "./dist/meditation-${VERSION}.tar.gz" LICENSE README.md package.json tag.hbs post.hbs default.hbs index.hbs assets partials
 
   git push origin refs/tags/v$VERSION
   git push
